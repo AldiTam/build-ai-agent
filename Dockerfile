@@ -5,7 +5,16 @@ FROM python:3.13.4-slim-bullseye
 
 WORKDIR /app
 
-RUN echo "hello" > index.html
+# COPY local_folder container_folder
+# RUN mkdir -p /static_folder
+# COPY ./static_html /static_folder
+
+
+# same destination is /app
+# COPY ./static_html /app
+COPY ./static_html .
+
+# RUN echo "hello" > index.html
 
 
 # docker build -f Dockerfile -t pyapp .
