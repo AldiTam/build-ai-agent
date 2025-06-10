@@ -1,12 +1,10 @@
 services: # dockers compose expects 
   app: # custom key name
-    image: python:3.13.4-slim-bullseye
+    # image: python:3.13.4-slim-bullseye
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
       - 8000:8000
       - 3000:8000
-    command: python -m http.server 8000
-  app2:
-    image: python:3.13.4-slim-bullseye
-    ports:
-      - 8001:8000
     command: python -m http.server 8000
