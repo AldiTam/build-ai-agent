@@ -12,7 +12,7 @@ WORKDIR /app
 
 # same destination is /app
 # COPY ./static_html /app
-COPY ./static_html .
+COPY ./src .
 
 # RUN echo "hello" > index.html
 
