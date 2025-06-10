@@ -20,6 +20,13 @@ docker build -f Dockerfile -t pyapp .
 docker run -it pyapp
 ```
 
+### Enter Container Command Line (like _ssh_)
+
+```bash
+docker run -it pyapp /bin/bash
+```
+> `/bin/bash` just runs the bash shell, you can also run `docker run -it pyapp python` or `docker run -it pyapp node` if those tools are avialable.
+
 
 ### Build and Push to Docker Hub
 
@@ -42,5 +49,14 @@ docker push codingforentrepreneurs/ai-py-app-test --all-tags
 
 #### Build with Docker Compose
 
+```bash
+docker compose up
 ```
+
+```bash
+docker compose down
+```
+
+```bash
+docker compose run <service_name> /bin/bash
 ```
