@@ -7,4 +7,6 @@ services: # dockers compose expects
     ports:
       - 8000:8000
       - 3000:8000
-    command: python -m http.server 8000
+    command: python -m http.server 8000 
+    volumes:
+      - ./static_html/src:/app
