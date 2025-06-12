@@ -66,7 +66,7 @@ docker compose run <service_name> /bin/bash
 
 _From host terminal_
 ```bash
-curl http://localhost:12345/engines/v1/chat/completions \
+curl http://localhost:12434/engines/v1/chat/completions \
     -H "Content-Type: application/json" \
     -d '{
         "model": "ai/gemma3",
@@ -82,6 +82,7 @@ curl http://localhost:12345/engines/v1/chat/completions \
         ]
     }'
 ```
+
 
 _From within a container_
 ```bash
