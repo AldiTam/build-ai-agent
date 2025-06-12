@@ -22,6 +22,7 @@ def chat_list_messages(session: Session = Depends(get_session)):
 
 # HTTP POST -> payload = {"message": "Hello world"} -> {"message": "hello world", "id": 1}
 # curl -X POST -d '{"message": "Hello world"}' -H "Content-Type: application/json" http://localhost:8080/api/chats/
+# curl -X POST -d '{"message": "Hello world"}' -H "Content-Type: application/json"  https://docker-api-fastapi-python-app-3jid9.ondigitalocean.app/api/chats/
 @router.post("/", response_model=ChatMessageListItem)
 def chat_create_message(
     payload:ChatMessagePayload,
