@@ -26,7 +26,9 @@ def chat_list_messages(session: Session = Depends(get_session)):
 # curl -X POST -d '{"message": "Hello world"}' -H "Content-Type: application/json" http://localhost:8080/api/chats/
 # curl -X POST -d '{"message": "Hello world"}' -H "Content-Type: application/json"  https://docker-api-fastapi-python-app-3jid9.ondigitalocean.app/api/chats/
 
-# curl -X POST -d '{"message": "Give me a summary of why it's good to go outside"}' -H "Content-Type: application/json" http://localhost:8080/api/chats/
+# curl -X POST -d '{"message": "Give me a summary of why it is good to go outside"}' -H "Content-Type: application/json" http://localhost:8080/api/chats/
+
+# curl -X POST -d '{"message": "Give me a summary of why it is good to go outside"}' -H "Content-Type: application/json" https://docker-api-fastapi-python-app-3jid9.ondigitalocean.app/api/chats/
 @router.post("/", response_model=EmailMessageSchema)
 def chat_create_message(
     payload:ChatMessagePayload,
