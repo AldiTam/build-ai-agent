@@ -44,4 +44,4 @@ def get_unread_emails(hours_ago:int=48) -> str:
         for k, v in data.items():
             msg += f"{k}:\t{v}"
         cleaned.append(msg)
-    return "\n-----\n".join(cleaned)
+    return "\n-----\n".join(cleaned)[:500]
